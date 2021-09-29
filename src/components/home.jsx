@@ -3,11 +3,11 @@ import {faGithub as Github} from '@fortawesome/free-brands-svg-icons'
 export default function Home(){
     return(
         <div className="home">
-            <div className="hero">
+            <div className="hero" style={{backgroundImage: 'url(/img/hero.jpg)', backgroundSize: 'cover'}}>
                 <div className="content">
-                    <h1 className="head">Theme JSX</h1>
-                    <h2 className="info">A React template by <a href="https://anshc.co" target="blank">Ansh C</a></h2>
-                    <h3 className="description">Run <code>npm install</code> to get all the packages used by this theme installed.</h3>  
+                    <h1 className="head">MMJ</h1>
+                    <h2 className="info">Coming Soon!</h2>
+                    <h3 className="description">In association with</h3>  
                     <a href="https://github.com/AnshC/theme-jsx" className="repo"><FontAwesomeIcon className="icon" icon={Github}/> Clone from repository</a>
                 </div>
             </div>

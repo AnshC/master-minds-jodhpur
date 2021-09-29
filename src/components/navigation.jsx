@@ -24,7 +24,7 @@ export default function Navigation(){
     })
     return(
         <div className="navigation">
-            <h1 id="brand">Theme JSX</h1>
+            <h1 id="brand">MMJ</h1>
             <div className="burger">
                 <div className="line" id="line1"></div>
                 <div className="line" id="line2"></div>

@@ -20,8 +20,7 @@
 /* Default */
 
 :root{
-  --blue: rgb(0, 102, 255);
-  --dark: rgb(1, 49, 121);
+  --primary: #e33131;
 }
 
 *{
@@ -45,7 +44,7 @@
 .navigation {
   width:100%;
   min-height:12vh;
-  background-color: var(--blue);
+  background-color: var(--primary);
   display: flex;
   align-items: center;
   justify-content:space-around;
@@ -53,7 +52,7 @@
 }
 
 .navigation #brand{
-  font-family: InterLight;
+  font-family: InterBold;
   color:white;
 }
 
@@ -74,22 +73,22 @@
   padding-left:10px;
   padding-right:10px;
   border-radius:100px;
-  transition:all 0.5s;
+  transition:border 0.2s;
+  border: solid 2px var(--primary);
 }
 
 .navigation #special{
   background-color:white;
-  color: var(--blue)
+  color: var(--primary)
 }
 
 .navigation #special:hover{
-  background-color:var(--blue);
+  background-color:var(--primary);
   color:white;
 }
 
 .navigation .ReactLink:hover{
-  background-color:white;
-  color: var(--blue);
+  border: solid 2px white;
 }
 
 .navigation .burger .line {
@@ -120,7 +119,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--blue);
+    background-color: var(--primary);
     right: 0px;
     top: 12vh;
   }
@@ -151,16 +150,11 @@
   margin: 0;
 }
 
-.link-active {
-
-}
-
 /* Home Styles */
 
 .home .hero{
   width: 100%;
   height: 80vh;
-  background-color: var(--blue);
 }
 
 .home .hero .content{
@@ -174,12 +168,18 @@
   padding-left:20px;
   padding-right: 20px;
   text-align:center;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .home .hero .head{
-  font-family: InterLight;
+  font-family: InterBold;
   font-size:50px;
   padding:20px;
+}
+
+.home .hero .description {
+  font-family: InterLight;
 }
 
 .home .hero a{
@@ -188,7 +188,7 @@
 
 .home .hero code{
   background-color:white;
-  color:var(--blue);
+  color:var(--primary);
   padding:2px;
   border-radius: 5px;
 }
@@ -209,7 +209,7 @@
 
 .home .hero .repo:hover{
   background-color:white;
-  color:var(--blue);
+  color:var(--primary);
 }
 
 .home section.cards{
@@ -221,7 +221,7 @@
   padding-bottom:20px;
   text-align:center;
   font-family: InterBold;
-  color:var(--blue);
+  color:var(--primary);
   font-size:35px;
   text-decoration: underline;
   text-underline-offset: 10px;
@@ -250,7 +250,7 @@
 .home section.cards .card ul{
   padding-bottom:10px;
   padding-top: 5px;
-  color:var(--blue);
+  color:var(--primary);
   padding-left:10px;
   list-style: none;
 }
@@ -261,7 +261,7 @@
 }
 
 .home section.cards .card code{
-  color:var(--blue);
+  color:var(--primary);
 }
 /* About Styles */
 .about{
@@ -284,7 +284,7 @@
 .footer{
   text-align:center;
   padding:10px;
-  background-color:var(--blue);
+  background-color:var(--primary);
   color:white;
 }
 
