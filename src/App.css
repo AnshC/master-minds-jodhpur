@@ -1,0 +1,299 @@
+/* Fonts */
+@font-face {
+  font-family: InterLight;
+  src: url('fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: 500;
+}
+
+@font-face{
+  font-family: InterBold;
+  src: url('fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight:800;
+}
+
+/* Default */
+
+:root{
+  --blue: rgb(0, 102, 255);
+  --dark: rgb(1, 49, 121);
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.main{
+  padding-left:10vw;
+  padding-right:10vw;
+  font-family:Inter;
+}
+
+.ReactLink{
+  text-decoration: none;
+  color:inherit;
+}
+
+/* Navigation Styles */
+.navigation {
+  width:100%;
+  min-height:12vh;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  overflow: hidden;
+}
+
+.navigation #brand{
+  font-family: InterLight;
+  color:white;
+}
+
+.navigation .links{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navigation .link{
+  padding:40px;
+}
+
+.navigation .ReactLink{
+  color:white;
+  font-family:Inter;
+  padding:5px;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius:100px;
+  transition:all 0.5s;
+}
+
+.navigation #special{
+  background-color:white;
+  color: var(--blue)
+}
+
+.navigation #special:hover{
+  background-color:var(--blue);
+  color:white;
+}
+
+.navigation .ReactLink:hover{
+  background-color:white;
+  color: var(--blue);
+}
+
+.navigation .burger .line {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+  transition: all 0.2s ;
+}
+
+.navigation .burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Nav Responsive Styles */
+
+@media screen and (max-width: 860px) {
+  .navigation .burger{
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    width: 100%;
+    height: 88vh;
+    display: none !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    right: 0px;
+    top: 12vh;
+  }
+
+  .link {
+    transition: all 1s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.nav-active {
+  display: flex !important;
+}
+
+.burger-animation #line1 {
+  transform: rotate(-45deg) translate(-5px, 4px);
+  margin:0
+}
+
+.burger-animation #line2 {
+  opacity: 0;
+}
+
+.burger-animation #line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+  margin: 0;
+}
+
+.link-active {
+
+}
+
+/* Home Styles */
+
+.home .hero{
+  width: 100%;
+  height: 80vh;
+  background-color: var(--blue);
+}
+
+.home .hero .content{
+  flex-direction: column;
+  height:100%;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-family: Inter;
+  padding-left:20px;
+  padding-right: 20px;
+  text-align:center;
+}
+
+.home .hero .head{
+  font-family: InterLight;
+  font-size:50px;
+  padding:20px;
+}
+
+.home .hero a{
+  color:white;
+}
+
+.home .hero code{
+  background-color:white;
+  color:var(--blue);
+  padding:2px;
+  border-radius: 5px;
+}
+
+.home .hero .repo{
+  margin-top:20px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Inter;
+  color:white;
+  padding:7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:transparent;
+  border:2px solid white;
+  transition: all 0.2s;
+}
+
+.home .hero .repo:hover{
+  background-color:white;
+  color:var(--blue);
+}
+
+.home section.cards{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.home section.cards .head{
+  padding-bottom:20px;
+  text-align:center;
+  font-family: InterBold;
+  color:var(--blue);
+  font-size:35px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.home section.cards .row{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.home section.cards .card{
+  box-shadow:rgba(0,0,0,0.2) 0px 0px 10px;
+  margin:10px;
+  flex: 1 200px;
+  padding:20px;
+  text-align: center;
+}
+
+.home section.cards .card .head{
+  text-decoration: none;
+  font-size:25px;
+  padding:0;
+  padding-bottom:20px;
+}
+
+.home section.cards .card ul{
+  padding-bottom:10px;
+  padding-top: 5px;
+  color:var(--blue);
+  padding-left:10px;
+  list-style: none;
+}
+
+.home section.cards .card li{
+  font-family: InterBold;
+  margin-top: 4px;
+}
+
+.home section.cards .card code{
+  color:var(--blue);
+}
+/* About Styles */
+.about{
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h1 {
+  font-family: InterBold;
+  text-align: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+/* Footer Styles */
+
+.footer{
+  text-align:center;
+  padding:10px;
+  background-color:var(--blue);
+  color:white;
+}
+
+.footer .head{
+  font-family: InterLight;
+}
+
+.footer h2{
+  padding: 5px;
+  font-size:15px;
+  font-family: Inter;
+}
