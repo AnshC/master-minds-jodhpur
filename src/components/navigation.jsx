@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub as Github} from '@fortawesome/free-brands-svg-icons'
+import { faPencilAlt as Register, faHome as Home, faInfoCircle as About } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 export default function Navigation(){
@@ -8,12 +8,11 @@ export default function Navigation(){
         const burger = document.querySelector('.burger');
         const links = document.querySelector('.links');
         const link = document.querySelectorAll('.link');
+        const nav = document.querySelector('.navigation')
         burger.addEventListener('click', () => {
             links.classList.toggle('nav-active')
             burger.classList.toggle('burger-animation')
-            for (var x = 0; x < link.length; x++) {
-                link[x].classList.toggle('link-active')
-            }
+            nav.classList.toggle('navigation-active')
         });
         for (var i = 0; i < link.length; i++) {
             link[i].addEventListener('click', ()=>{
@@ -24,18 +23,25 @@ export default function Navigation(){
     })
     return(
         <div className="navigation">
-            <h1 id="brand">MMJ</h1>
+            <img src="/img/mmj-r.png" alt="MMJ Logo" />
             <div className="burger">
                 <div className="line" id="line1"></div>
                 <div className="line" id="line2"></div>
                 <div className="line" id="line3"></div>
             </div>            
             <ul className="links">
-                <li className="link"><Link to="/" className="ReactLink">Home</Link></li>
-                <li className="link"><Link to="/about" className="ReactLink">About</Link></li>
                 <li className="link">
-                    <a href="https://github.com/AnshC/theme-jsx" className="ReactLink" id="special">
-                        <FontAwesomeIcon icon={Github} /> Github
+                    <Link to="/" className="ReactLink">
+                        <FontAwesomeIcon className="icon" icon={Home}/> Home
+                    </Link>
+                </li>
+                <li className="link">
+                    <Link to="/about" className="ReactLink">
+                        <FontAwesomeIcon icon={About} /> About
+                    </Link></li>
+                <li className="link">
+                    <a href="https://google.com" className="ReactLink" id="special">
+                        <FontAwesomeIcon className="icon" icon={Register} /> Register
                     </a>
                 </li>
             </ul>

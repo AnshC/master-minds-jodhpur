@@ -1,14 +1,21 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGithub as Github} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarDay as Date, faGlobeAfrica as Web, faEnvelope as Mail } from '@fortawesome/free-solid-svg-icons'
+
+import { faInstagram as Insta, faFacebook as Facebook } from '@fortawesome/free-brands-svg-icons'
+
 export default function Home(){
     return(
         <div className="home">
             <div className="hero" style={{backgroundImage: 'url(/img/hero.jpg)', backgroundSize: 'cover'}}>
                 <div className="content">
-                    <h1 className="head">MMJ</h1>
-                    <h2 className="info">Coming Soon!</h2>
-                    <h3 className="description">In association with</h3>  
-                    <a href="https://github.com/AnshC/theme-jsx" className="repo"><FontAwesomeIcon className="icon" icon={Github}/> Clone from repository</a>
+                    <img src="/img/mmj-w.png" alt="MMJ Logo" id="brand" />
+                    <h2 className="repo"><FontAwesomeIcon icon={Date}/> Coming Soon!</h2>
+                    <div className="social">
+                        <a href="https://instagram.com/mastermindjodhpur" target="_blank"><FontAwesomeIcon className="icon" icon={Insta} /></a>
+                        <a><FontAwesomeIcon className="icon" icon={Facebook} /></a>
+                        <a href="https://ourheritage.in"><FontAwesomeIcon className="icon" icon={Web} /></a>
+                        <a><FontAwesomeIcon className="icon" icon={Mail} /></a>
+                    </div>
                 </div>
             </div>
             <div className="main">

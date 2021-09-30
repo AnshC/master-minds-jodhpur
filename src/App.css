@@ -21,6 +21,7 @@
 
 :root{
   --primary: #e33131;
+  --primary-light: #f35858;
 }
 
 *{
@@ -40,20 +41,23 @@
   color:inherit;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Navigation Styles */
 .navigation {
   width:100%;
   min-height:12vh;
-  background-color: var(--primary);
   display: flex;
   align-items: center;
   justify-content:space-around;
-  overflow: hidden;
+  position: absolute;
+  z-index: 10;
 }
 
-.navigation #brand{
-  font-family: InterBold;
-  color:white;
+.navigation img{
+  width: 100px;
 }
 
 .navigation .links{
@@ -64,31 +68,35 @@
 
 .navigation .link{
   padding:40px;
+  font-size: 17px;
 }
 
 .navigation .ReactLink{
   color:white;
   font-family:Inter;
-  padding:5px;
-  padding-left:10px;
-  padding-right:10px;
+  padding:7px;
+  padding-left:14px;
+  padding-right:14px;
   border-radius:100px;
-  transition:border 0.2s;
-  border: solid 2px var(--primary);
+  transition:border 0.2s, color 0.2s, background-color 0.2s, box-shadow 0.3s;
+  border: solid 2px white;
 }
 
 .navigation #special{
   background-color:white;
-  color: var(--primary)
+  color: var(--primary);
+  border-color: transparent;
 }
 
 .navigation #special:hover{
-  background-color:var(--primary);
+  background-color:var(--primary-light);
   color:white;
+  box-shadow: var(--primary-light) 0px 0px 20px;
 }
 
 .navigation .ReactLink:hover{
-  border: solid 2px white;
+  border: solid 2px var(--primary-light);
+  color: var(--primary-light);
 }
 
 .navigation .burger .line {
@@ -102,39 +110,10 @@
 .navigation .burger {
   display: none;
   cursor: pointer;
+  z-index: 5;
 }
 
 /* Nav Responsive Styles */
-
-@media screen and (max-width: 860px) {
-  .navigation .burger{
-    display: block;
-  }
-
-  .links {
-    position: absolute;
-    width: 100%;
-    height: 88vh;
-    display: none !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary);
-    right: 0px;
-    top: 12vh;
-  }
-
-  .link {
-    transition: all 1s;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-}
-
-.nav-active {
-  display: flex !important;
-}
 
 .burger-animation #line1 {
   transform: rotate(-45deg) translate(-5px, 4px);
@@ -148,6 +127,49 @@
 .burger-animation #line3 {
   transform: rotate(45deg) translate(-5px, -5px);
   margin: 0;
+}
+
+@media only screen and (max-width: 860px) {
+
+  .navigation .burger{
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    right: 0px;
+    top: 0px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .link {
+    transition: all 1s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .navigation .ReactLink:hover {
+    background-color: white;
+    color: var(--primary);
+    border-color: transparent;
+  }
+
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.navigation-active {
+  position: fixed;
 }
 
 /* Home Styles */
@@ -169,28 +191,11 @@
   padding-right: 20px;
   text-align:center;
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
 }
 
-.home .hero .head{
-  font-family: InterBold;
-  font-size:50px;
-  padding:20px;
-}
-
-.home .hero .description {
-  font-family: InterLight;
-}
-
-.home .hero a{
-  color:white;
-}
-
-.home .hero code{
-  background-color:white;
-  color:var(--primary);
-  padding:2px;
-  border-radius: 5px;
+.home .hero img{
+  width: 250px;
+  margin-bottom: 5px;
 }
 
 .home .hero .repo{
@@ -200,16 +205,33 @@
   font-family: Inter;
   color:white;
   padding:7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color:transparent;
-  border:2px solid white;
-  transition: all 0.2s;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color:var(--primary);
+  border-radius: 10px;
 }
 
-.home .hero .repo:hover{
-  background-color:white;
-  color:var(--primary);
+.home .hero .social {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  top: 70vh;
+  z-index: 1;
+}
+
+.home .hero .social a {
+  color: white;
+}
+
+.home .hero .social .icon {
+  font-size: 30px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.home .hero .social .icon:hover {
+  transform: rotate(5deg) scale(1.4);
 }
 
 .home section.cards{
