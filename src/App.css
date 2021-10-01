@@ -42,16 +42,22 @@
   color:inherit;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .red-c {
   color: var(--primary);
 }
 
 p {
   color: var(--text);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden !important;
 }
 
 /* Navigation Styles */
