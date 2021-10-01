@@ -1,7 +1,9 @@
 export default function About(){
     return(
         <div className="about">
-            <h1>This is a sample about page, to display the react router dom in function</h1>
+            <div className="nav-bg"></div>
+            <h1>More Information To Be Released Soon!</h1>
+            <p>Stay Tuned.</p>
         </div>
     )
 }

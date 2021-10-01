@@ -40,7 +40,7 @@ export default function Navigation(){
                         <FontAwesomeIcon icon={About} /> About
                     </Link></li>
                 <li className="link">
-                    <a href="https://google.com" className="ReactLink" id="special">
+                    <a href="https://forms.gle/RnSPmEKbAppMhnuj7" className="ReactLink" id="special">
                         <FontAwesomeIcon className="icon" icon={Register} /> Register
                     </a>
                 </li>

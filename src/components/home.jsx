@@ -27,15 +27,15 @@ export default function Home(){
                     <p>Intra-District Level Mathematics Competition</p>
                     <h2 className="repo"><FontAwesomeIcon icon={Date}/> Coming Soon!</h2>
                     <div className="social">
-                        <a href="https://instagram.com/mastermindjodhpur" target="_blank"><FontAwesomeIcon className="icon" icon={Insta} /></a>
-                        <a><FontAwesomeIcon className="icon" icon={Facebook} /></a>
+                        <a href="https://instagram.com/mastermindjodhpur"><FontAwesomeIcon className="icon" icon={Insta} /></a>
+                        <a href="https://m.facebook.com/suncitysociety/"><FontAwesomeIcon className="icon" icon={Facebook} /></a>
                         <a href="https://ourheritage.in"><FontAwesomeIcon className="icon" icon={Web} /></a>
-                        <a><FontAwesomeIcon className="icon" icon={Mail} /></a>
+                        <a href="https://mail.google.com"><FontAwesomeIcon className="icon" icon={Mail} /></a>
                     </div>
                 </div>
             </div>
             <div className="main">
-                <section className="about">
+                <section id="about">
                     <h1>How Do I <span className="red-c">Register?</span></h1>
                     <Cards common={cardStyles}>
                         <Card>
@@ -48,7 +48,7 @@ export default function Home(){
                             <div className="content">
                                 <p>Click the button to Register</p>
                                 <p>This will lead you to a registeration form.</p>
-                                <a href="www.google.com" id="button"><FontAwesomeIcon icon={Register}/> Register Now!</a>
+                                <a href="https://forms.gle/RnSPmEKbAppMhnuj7" id="button"><FontAwesomeIcon icon={Register}/> Register Now!</a>
                             </div>
                         </Card>
                         <Card>

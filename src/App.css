@@ -263,17 +263,17 @@ body {
   align-items: center;
 }
 
-.home section.about {
+.home section#about {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.home section.about h1 {
+.home section#about h1 {
   font-size: 50px;
   margin-bottom: 20px;
 }
 
-.home section.about h1 span {
+.home section#about h1 span {
   font-family: InterBold;
 }
 
@@ -289,7 +289,7 @@ body {
   padding-bottom: 20px;
 }
 
-.home section.about .cool-card .circle {
+.home section#about .cool-card .circle {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -303,26 +303,26 @@ body {
   font-family: InterBold;
 }
 
-.home section.about .cool-card .head {
+.home section#about .cool-card .head {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.home section.about .cool-card .head .h1 {
+.home section#about .cool-card .head .h1 {
   font-size: 30px;
   margin-left: 20px;
   font-family: InterBold;
   color: white;
 }
 
-.home section.about .cool-card .content p {
+.home section#about .cool-card .content p {
   color: white;
   margin-bottom: 15px;
 }
 
-.home section.about .cool-card .content a {
+.home section#about .cool-card .content a {
   color: var(--primary);
   background-color: white;
   padding-left:10px;
@@ -335,8 +335,31 @@ body {
   transition: box-shadow 0.3s;
 }
 
-.home section.about .cool-card .content a:hover{
+.home section#about .cool-card .content a:hover{
   box-shadow: rgba(0,0,0,0.7) 0px 0px 10px;
+}
+
+/* About Styles */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  font-family: InterBold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  text-align: center;
+  flex-direction: column;
+}
+
+.about .nav-bg {
+  background-color: black;
+  height: 13vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 /* Footer Styles */
