@@ -29,18 +29,6 @@
             "nameline2": "Patwa",
             "img": "default_girl.jpg",
             "about": "Promotor"
-        },
-        {
-            "nameline1": "Person 6",
-            "nameline2": "",
-            "img": "default_girl.jpg",
-            "about": "Fun Person"
-        },
-        {
-            "nameline1": "Person 7",
-            "nameline2": "",
-            "img": "default.jpg",
-            "about": "Fun Person"
         }
     ]
 }
