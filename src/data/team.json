@@ -1,0 +1,46 @@
+{
+    "people": [
+        {
+            "nameline1": "Raghuveer",
+            "nameline2": "Vaidya",
+            "img": "default.jpg",
+            "about": "Founder"
+        },
+        {
+            "nameline1": "Meghna Shah",
+            "nameline2": "Vaidya",
+            "img": "default_girl.jpg",
+            "about": "Exhibitor"
+        },
+        {
+            "nameline1": "Ajay",
+            "nameline2": "Bokaria",
+            "img": "default.jpg",
+            "about": "Promoter"
+        },
+        {
+            "nameline1": "Raunak",
+            "nameline2": "Loonker",
+            "img": "default.jpg",
+            "about": "Coordinator"
+        },
+        {
+            "nameline1": "Lokesh",
+            "nameline2": "Patwa",
+            "img": "default_girl.jpg",
+            "about": "Promotor"
+        },
+        {
+            "nameline1": "Person 6",
+            "nameline2": "",
+            "img": "default_girl.jpg",
+            "about": "Fun Person"
+        },
+        {
+            "nameline1": "Person 7",
+            "nameline2": "",
+            "img": "default.jpg",
+            "about": "Fun Person"
+        }
+    ]
+}

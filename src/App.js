@@ -1,9 +1,12 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Home from './components/home'
+
+import Home from './components/home';
+import About from './components/about';
+import Team from './components/team';
+
 import Footer from './components/footer';
 import Navigation from './components/navigation';
-import About from './components/about';
 
 function App() {
   return (
@@ -13,6 +16,7 @@ function App() {
         <Switch>
           <Route component={Home} path="/" exact />
           <Route component={About} path="/about" />
+          <Route component={Team} path="/team" />
         </Switch>
         <Footer />
       </div>

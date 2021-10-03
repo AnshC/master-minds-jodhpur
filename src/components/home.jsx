@@ -1,5 +1,15 @@
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarDay as Date, faGlobeAfrica as Web, faEnvelope as Mail, faPencilAlt as Register } from '@fortawesome/free-solid-svg-icons'
+import { 
+    faCalendarDay as Date, 
+    faGlobeAfrica as Web, 
+    faEnvelope as Mail, 
+    faPencilAlt as Register, 
+    faGift as Gift,
+    faCheckCircle as Eligible,
+    faUserFriends as Team,
+    faInfoCircle as About
+} from '@fortawesome/free-solid-svg-icons'
 import { Cards, Card } from 'react-cool-cards'
 import { faInstagram as Insta, faFacebook as Facebook } from '@fortawesome/free-brands-svg-icons'
 
@@ -16,6 +26,17 @@ export default function Home(){
             type: 'rounded',
             fill: 'gradient',
             animation: 'grow'
+        }
+    }
+    const redCard = {
+        width: '250px',
+        maxWidth: '450px',
+        height: '200px',
+        maxHeight: '200px',
+        margin: '15px',
+        style: 'custom',
+        theme: {
+            animation: ''
         }
     }
     return(
@@ -47,7 +68,7 @@ export default function Home(){
                             </div>
                             <div className="content">
                                 <p>Click the button to Register</p>
-                                <p>This will lead you to a registeration form.</p>
+                                <p>This will lead you to a registration form.</p>
                                 <a href="https://forms.gle/RnSPmEKbAppMhnuj7" id="button"><FontAwesomeIcon icon={Register}/> Register Now!</a>
                             </div>
                         </Card>
@@ -59,8 +80,8 @@ export default function Home(){
                                 <div className="h1">Fill the Form</div>
                             </div>
                             <div className="content">
-                                <p>Fill up the form to complete the registeration.</p>
-                                <p style={{fontStyle: 'italic'}}>Data collected is purely for registeration purposes only.</p>
+                                <p>Fill up the form to complete the registration.</p>
+                                <p style={{fontStyle: 'italic'}}>Data collected is purely for registration purposes only.</p>
                             </div>
                         </Card>
                         <Card>
@@ -77,10 +98,77 @@ export default function Home(){
                     </Cards>
                     <h1>What Is <span className="red-c">MMJ?</span></h1>
                     <div className="row-s">
-                        
-                        <p>Master Mind Jodhpur is an intra-district mathematics competition conducted by the Rotract Roundtown Club of Jodhpur. These exams will be conducted for Grades 9 to 12, in both Hindi and English Medium. It will cover the whole Jodhpur District.</p>
+                        <p>Master Mind Jodhpur is an intra-district mathematics competition brought to you by the Rotaract Roundtown Club of Jodhpur and Process & Concepts. These exams will be conducted for Grades 8 to 11, in both Hindi and English Medium. It will cover the whole Jodhpur District.</p>
                     </div>
                 </section>
+            </div>
+            <div className="info">
+                <Cards common={redCard}>
+                    <Card>
+                        <div className="wrapper">
+                            <div className="circle">
+                                <FontAwesomeIcon icon={Gift} className="icon"/>
+                            </div>
+                            <div className="content">
+                                <h1>Prizes.</h1>
+                                <p>Exciting prizes await you!</p>
+                            </div>
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="wrapper">
+                            <div className="circle">
+                                <FontAwesomeIcon icon={Eligible} className="icon"/>
+                            </div>
+                            <div className="content">
+                                <h1>Eligibility</h1>
+                                <ul>
+                                    <li>Grades: 8-11</li>
+                                    <li>Location: Jodhpur District</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </Card>
+                </Cards>
+                <Cards common={redCard}>
+                    <Card>
+                        <Link to="/team" className="no-d">
+                            <div className="wrapper">
+                                <div className="circle">
+                                    <FontAwesomeIcon icon={Team} className="icon" />
+                                </div>
+                                <div className="content">
+                                    <h1>Team MMJ.</h1>
+                                    <p>Check out the wonderful team behind MMJ!</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </Card>
+                    <Card>
+                        <Link to="/about" className="no-d">
+                            <div className="wrapper">
+                                <div className="circle">
+                                    <FontAwesomeIcon className="icon" icon={About} />
+                                </div>
+                                <div className="content">
+                                    <h1>About MMJ.</h1>
+                                    <p>Learn more about this event.</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </Card>
+                </Cards>
+            </div>
+            <div className="btyb main">
+                <h1>Brought to <span className="blue-c">You By:</span></h1>
+                <div className="row">
+                    <a href="https://instagram.com/process_concepts">
+                        <img src="/img/logos/process_and_concepts.jpg" alt="Process & Concepts Logo" style={{width: '250px'}}/>
+                    </a>
+                    <a href="https://www.instagram.com/rotaractroundtownjodhpur/">
+                        <img src="/img/logos/rotaract.png" alt="Rotaract Roundtown Logo" style={{minHeight: '100px', maxHeight: '100px'}}/>
+                    </a>
+                </div>
             </div>
         </div>
     )

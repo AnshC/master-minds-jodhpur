@@ -8,7 +8,7 @@ export default function Navigation(){
         const burger = document.querySelector('.burger');
         const links = document.querySelector('.links');
         const link = document.querySelectorAll('.link');
-        const nav = document.querySelector('.navigation')
+        const nav = document.querySelector('.navigation');
         burger.addEventListener('click', () => {
             links.classList.toggle('nav-active')
             burger.classList.toggle('burger-animation')

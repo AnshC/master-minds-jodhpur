@@ -14,7 +14,7 @@
 @font-face{
   font-family: InterBold;
   src: url('fonts/Inter-VariableFont_slnt\,wght.ttf');
-  font-weight:800;
+  font-weight:900;
 }
 
 /* Default */
@@ -23,6 +23,11 @@
   --primary: #e33131;
   --primary-light: #f35858;
   --text: rgb(97, 97, 97);
+
+  --blue: #00359E;
+  --light-blue: #095edd;
+
+  --dark: #100f0f;
 }
 
 *{
@@ -37,6 +42,12 @@
   font-family:Inter;
 }
 
+.main-5 {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-family:Inter;
+}
+
 .ReactLink{
   text-decoration: none;
   color:inherit;
@@ -46,18 +57,28 @@
   color: var(--primary);
 }
 
+.blue-c {
+  color: var(--blue);
+}
+
 p {
   color: var(--text);
 }
 
 body {
   overflow-x: hidden;
+  background-color: #f9fafc;
 }
 
 .App {
   width: 100%;
   position: relative;
   overflow-x: hidden !important;
+}
+
+.no-d {
+  text-decoration: none;
+  color: initial;
 }
 
 /* Navigation Styles */
@@ -271,13 +292,14 @@ body {
 .home section#about h1 {
   font-size: 50px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .home section#about h1 span {
   font-family: InterBold;
 }
 
-.cool-card {
+section#about .cool-card {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 20px;
@@ -285,7 +307,7 @@ body {
   padding:20px;
 }
 
-.cool-card-wrapper {
+section#about .cool-card-wrapper {
   padding-bottom: 20px;
 }
 
@@ -339,6 +361,102 @@ body {
   box-shadow: rgba(0,0,0,0.7) 0px 0px 10px;
 }
 
+.home .info {
+  background-color: #f9fafc;
+  width: 100%;
+  min-height: 50vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.home .info .cool-card {
+  font-family: Inter;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0,0.15) 2px 5px 10px ;
+}
+
+.home .info .cool-card:hover {
+  transform: rotate(2deg) scale(1.02) !important;
+}
+
+.home .info .cool-card h1 {
+  font-family: InterBold;
+  font-size: 35px;
+  color: var(--primary);
+}
+
+.home .info .cool-card .wrapper{
+  padding:20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.home .info .circle {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  min-height: 80px;
+  border: 4px solid var(--primary);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.home .info .icon {
+  font-size: 40px;
+  color: var(--primary);
+}
+
+.home .info .content {
+  margin-left: 10px;
+}
+
+.home .info li {
+  margin-left: 20px;
+  color: var(--text);
+}
+
+.home .btyb h1{
+  font-family: Inter;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.home .btyb h1 span {
+  font-family: InterBold;
+}
+.home .btyb .row {
+  display: flex;
+  align-items: center;
+}
+
+.home .btyb .row a {
+  margin-right: 20px;
+}
+
+.home .btyb {
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 860px) {
+  .home .btyb .row {
+    flex-direction: column;
+  }
+  .home .btyb .row a {
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  section#about .cool-card {
+    margin-right: 0;
+  }
+} 
+
 /* About Styles */
 
 .about {
@@ -360,6 +478,76 @@ body {
   width: 100%;
   position: absolute;
   top: 0;
+}
+
+/* Team Styles */
+.team {
+  min-height: 100vh;
+} 
+
+.team .hero {
+  width: 100%;
+  height: 60vh;
+  font-family: Inter;
+  background-size: cover;
+  background-position: top;
+}
+
+.team .hero .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.team .hero h1 {
+  font-family: InterBold;
+  font-size: 60px;
+  color: white;
+  text-shadow: rgba(0,0,0,0.7) 0px 0px 10px;
+}
+
+.team .hero p {
+  color: white;
+}
+
+.team .cool-card-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.team .cool-card {
+  box-shadow: rgba(0,0,0,0.2) 2px 3px 10px;
+  border-radius: 10px;
+}
+
+.team .wrapper {
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.team .cool-card .circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: top;
+  margin-bottom: 10px;
+}
+
+.team .cool-card .wrapper h1{
+  font-family: InterBold;
 }
 
 /* Footer Styles */
