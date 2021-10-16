@@ -444,6 +444,100 @@ section#about .cool-card-wrapper {
   padding-bottom: 30px;
 }
 
+.home .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-family: Inter;
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+
+.home .contact .row {
+  display: flex;
+}
+
+.home .contact h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  font-family: InterBold;
+}
+
+.home .contact section:nth-child(1) {
+  border-right: 1px solid white;
+  padding-right: 20px;
+}
+
+.home .contact section:nth-child(2) {
+  border-left: 1px solid white;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .contact section h2 {
+  margin-bottom: 10px;
+}
+
+.home .contact section input {
+  padding: 5px 10px 5px 10px;
+  border-radius: 7px;
+  border: solid 2px var(--primary);
+  background-color: transparent;
+  outline: none;  
+  margin-bottom: 5px;
+  color: white;
+  font-family: Inter;
+}
+
+.home .contact section button {
+  width: min-content;
+  padding: 3px 10px 3px 10px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.home .contact section button:hover {
+  background-color: var(--primary-light);
+}
+
+.home .contact a {
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-underline-offset: 2px;
+  margin-top: 5px;
+}
+
+.home .contact .social {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.home .contact .social .icon {
+  font-size: 25px;
+}
+
+.home .contact #phone {
+  transform: rotate(90deg);
+}
+
+.home .contact .icon {
+  margin-right: 7px;
+}
+
 @media screen and (max-width: 860px) {
   .home .btyb .row {
     flex-direction: column;
@@ -454,6 +548,17 @@ section#about .cool-card-wrapper {
   }
   section#about .cool-card {
     margin-right: 0;
+  }
+  .home .contact .row {
+    flex-direction: column;
+  }
+  .home .contact section:nth-child(n), .home .contact a {
+    border: 0px transparent;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 } 
 
@@ -538,8 +643,8 @@ section#about .cool-card-wrapper {
 }
 
 .team .cool-card .circle {
-  width: 130px;
-  height: 130px;
+  min-width: 130px;
+  min-height: 130px;
   border-radius: 100%;
   background-size: cover;
   background-position: top;
@@ -548,6 +653,18 @@ section#about .cool-card-wrapper {
 
 .team .cool-card .wrapper h1{
   font-family: InterBold;
+}
+
+@media screen and (max-width: 630px) {
+  .team .wrapper {
+    flex-direction: row !important;
+  }
+  .team .cool-card .circle {
+    margin: 0 20px 0px 0px;
+  }
+  .team .wrapper .content {
+    text-align: left;
+  }
 }
 
 /* Footer Styles */
@@ -573,4 +690,84 @@ section#about .cool-card-wrapper {
 .footer a {
   color: white;
   text-decoration: none;
+}
+
+.footer .link {
+  display: flex;
+  align-items: center;
+  font-family: Inter;
+  text-align: center;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.footer .icon {
+  margin-right: 10px;
+}
+
+/* Login Styles */
+
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+} 
+
+.login form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0,0.5) 2px 3px 20px;
+}
+
+.login input {
+  padding: 3px 5px 3px 5px;
+  border-radius: 7px;
+  border: 2px solid var(--primary);
+  margin-bottom: 10px;
+  font-family: Inter;
+  width: 300px;
+}
+
+.login button {
+  background-color: var(--primary);
+  padding: 3px 14px 3px 14px;
+  border: none;
+  width: min-content;
+  outline: none;
+  color: white;
+  font-family: Inter;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.login label {
+  color:var(--text);
+}
+
+.login p {
+  margin-bottom: 30px;
+}
+
+.login h1 {
+  font-size: 50px;
+  font-family: InterBold;
+}
+
+.login img {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
 }

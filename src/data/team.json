@@ -21,7 +21,7 @@
         {
             "nameline1": "Raunak",
             "nameline2": "Loonker",
-            "img": "default.jpg",
+            "img": "raunak.jpeg",
             "about": "Coordinator"
         },
         {
@@ -29,6 +29,23 @@
             "nameline2": "Patwa",
             "img": "default_girl.jpg",
             "about": "Promotor"
+        },
+        {
+            "nameline1": "Niharika",
+            "nameline2": "Agarwal",
+            "img": "niharika.jpeg",
+            "about": "Graphic Designer"
+        },
+        {
+            "nameline1": "Mrighansh",
+            "nameline2": "Agarwal",
+            "img": "mrighansh.jpeg",
+            "about": "Motion Graphics Designer"
+        },{
+            "nameline1": "Sakshi",
+            "nameline2": "Garg",
+            "img": "sakshi.jpeg",
+            "about": "Social Media Marketer"
         }
     ]
 }

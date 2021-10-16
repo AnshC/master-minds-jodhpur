@@ -8,7 +8,8 @@ import {
     faGift as Gift,
     faCheckCircle as Eligible,
     faUserFriends as Team,
-    faInfoCircle as About
+    faInfoCircle as About,
+    faPhone
 } from '@fortawesome/free-solid-svg-icons'
 import { Cards, Card } from 'react-cool-cards'
 import { faInstagram as Insta, faFacebook as Facebook } from '@fortawesome/free-brands-svg-icons'
@@ -168,6 +169,36 @@ export default function Home(){
                     <a href="https://www.instagram.com/rotaractroundtownjodhpur/">
                         <img src="/img/logos/rotaract.png" alt="Rotaract Roundtown Logo" style={{minHeight: '100px', maxHeight: '100px'}}/>
                     </a>
+                </div>
+            </div>
+            <div className="contact" style={{backgroundImage: "url(/img/hero.jpg)"}}>
+                <h1>Queries?</h1>
+                <div className="row">
+                    <section>
+                    <h2>Contact Us!</h2>
+                        <a href="tel:8239755000">
+                            <FontAwesomeIcon className="icon" id="phone" icon={faPhone}/>
+                            +91 9983775559
+                        </a>
+                        <a href="mailto:mmj@ourheritage.in">
+                            <FontAwesomeIcon className="icon" icon={Mail} />
+                            mmj@ourheritage.in
+                        </a>
+                        <div className="social">
+                            <a href="https://instagram.com/mastermindjodhpur"><FontAwesomeIcon className="icon" icon={Insta} /></a>
+                            <a href="https://m.facebook.com/suncitysociety/"><FontAwesomeIcon className="icon" icon={Facebook} /></a>
+                            <a href="https://ourheritage.in"><FontAwesomeIcon className="icon" icon={Web} /></a>
+                            <a href="https://mail.google.com"><FontAwesomeIcon className="icon" icon={Mail} /></a>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Talk to Us!</h2>
+                        <input type="text" placeholder="Email"/>
+                        <input type="text" placeholder="Message"/>
+                        <button>
+                            Send
+                        </button>
+                    </section>
                 </div>
             </div>
         </div>

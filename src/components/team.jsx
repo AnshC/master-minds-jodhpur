@@ -1,11 +1,11 @@
 import { Cards, Card } from 'react-cool-cards'
-import {people} from '../data/team.json'
+import { people } from '../data/team.json'
 export default function Team() {
     const settings = {
         width: '240px',
         height: '300px',
         maxHeight: '300px',
-        maxWidth: '240px',
+        maxWidth: '100%',
         margin: '20px',
         style: 'custom'
     }
@@ -26,9 +26,13 @@ export default function Team() {
                                     <div className="wrapper">
                                         <div className="circle" style={{backgroundImage: `url(/img/team/${person.img})`}}>
                                         </div>
-                                        <h1>{person.nameline1}</h1>
-                                        <h1>{person.nameline2}</h1>
+                                        <div className="content">
+                                        <div className="name">
+                                            <h1>{person.nameline1}</h1>
+                                            <h1>{person.nameline2}</h1>
+                                        </div>
                                         <p>{person.about}</p>
+                                        </div>
                                     </div>
                                 </Card>
                             )
